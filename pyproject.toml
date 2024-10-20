@@ -1,0 +1,72 @@
+[project]
+name = "dp2gau"
+version = "0.1.0"
+description = "An external program to interface trained DeepPot-SE potentials with Gaussian."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "deepmd-kit[cpu]>=2.2.11",
+    "numpy>=1.26.4",
+]
+
+[tool.uv]
+dev-dependencies = ["ruff>=0.6.9"]
+
+[tool.ruff]
+exclude = [
+    ".bzr",
+    ".direnv",
+    ".eggs",
+    ".git",
+    ".git-rewrite",
+    ".hg",
+    ".ipynb_checkpoints",
+    ".mypy_cache",
+    ".nox",
+    ".pants.d",
+    ".pyenv",
+    ".pytest_cache",
+    ".pytype",
+    ".ruff_cache",
+    ".svn",
+    ".tox",
+    ".venv",
+    ".vscode",
+    "__pypackages__",
+    "_build",
+    "buck-out",
+    "build",
+    "dist",
+    "node_modules",
+    "site-packages",
+    "venv",
+]
+
+extend-include = ["*.ipynb"]
+
+indent-width = 4
+line-length = 119
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = ["E203", "D", "ANN", "COM", "G004", "T20", "ERA"]
+unfixable = ["F401", "F841"]
+dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
+
+[tool.ruff.lint.mccabe]
+max-complexity = 10
+
+[tool.ruff.lint.pydocstyle]
+convention = "numpy"
+
+[tool.ruff.lint.pylint]
+max-args = 8
+
+[tool.ruff.format]
+docstring-code-format = true
+docstring-code-line-length = "dynamic"
+indent-style = "space"
+line-ending = "native"
+quote-style = "double"
+skip-magic-trailing-comma = false
