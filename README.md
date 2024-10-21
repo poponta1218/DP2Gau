@@ -54,8 +54,6 @@ C
 
 ```
 
-
-
 ### Example
 
 Here is an example of a Gaussian input file that integrates `dp2gau.py`:
@@ -85,7 +83,7 @@ H 0.0 0.0 1.0
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE.md) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ### Third-Party Libraries
 
